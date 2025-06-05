@@ -69,10 +69,8 @@ numpy
 
 ## 📸 Giao diện
 
-![alt text](anhGiaoDien/meNu1.png)
-![alt text](anhGiaoDien/classicMode.png)
-![alt text](anhGiaoDien/menu2.png)
-![alt text](anhGiaoDien/timeMode.png)
+![alt text](anh_giao_dien/giao_dien_chinh.png)
+![alt text](anh_giao_dien/giao_dien_game.png)
 
 ## 📜 Giấy phép
 
