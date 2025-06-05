@@ -16,8 +16,18 @@ Một trò chơi **Bắn Vịt** cổ điển được điều khiển bằng **
 - 💥 Hiệu ứng trúng/miss, âm thanh sống động.
 - 🧠 Giao diện menu linh hoạt điều khiển bằng chuột hoặc tay.
 
-🎯 Giao diện chính
-![giao diện chính]()
+🎯 Giao diện
+<p align="center">
+  <img src="anh_giao_dien/giao_dien_chinh.png" alt="Giao diện chính" width="500"/>
+  <br/>
+  <em>Giao diện chính</em>
+</p>
+
+<p align="center">
+  <img src="anh_giao_dien/giao_dien_game.png" alt="Giao diện trò chơi" width="500"/>
+  <br/>
+  <em>Giao diện trò chơi</em>
+</p>
 ---
 
 ## 📦 Cài đặt
