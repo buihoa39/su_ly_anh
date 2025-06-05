@@ -1,92 +1,79 @@
-# 🦆 Duck Hunt - Hand Control Game
+Tên nhóm: Nhóm 8 - Công Nghệ Xử Lý Ảnh
+Thành viên:
+1. Nguyễn Vũ Phúc - 1571020202
+2. Bùi Khánh Hòa - 1571020112
+3. Lưu Anh Tú - 1571020267
+# 🦆 Duck Hunt - Hand Control 🎯
 
-Một trò chơi **Bắn Vịt** cổ điển được điều khiển bằng **cử chỉ tay** thông qua webcam, sử dụng **MediaPipe** và **OpenCV** kết hợp với **Pygame**. Người chơi dùng **ngón trỏ** làm tâm ngắm và **cử chỉ bàn tay** để bắn hoặc nạp đạn.
+Trò chơi **Duck Hunt** điều khiển bằng **cử chỉ tay** sử dụng **Mediapipe** và **OpenCV**, xây dựng bằng **Pygame**. Đây là một trò chơi săn vịt hiện đại, nơi bạn dùng **bàn tay thật trước webcam** để di chuyển tâm ngắm, bắn vịt và nạp đạn bằng các cử chỉ.
 
----
+## 🎮 Tính năng
 
-## 🎮 Tính năng chính
+- 👋 **Điều khiển bằng tay** qua webcam (Mediapipe Hand Tracking)
+- 🔫 Bắn vịt bằng cách chụm ngón cái và trỏ
+- ♻️ Nạp đạn bằng cách mở rộng khoảng cách giữa ngón cái và trỏ
+- 🧠 **AI smoothing** giúp tâm ngắm mượt mà hơn
+- 🕹️ 2 chế độ chơi:
+  - **Classic Mode**: Vịt xuất hiện liên tục, tăng độ khó theo điểm
+  - **Time Mode**: Các level với mục tiêu và giới hạn thời gian cụ thể
+- 💾 Lưu điểm cao nhất (`highscore.txt`)
+- 🔉 Hiệu ứng âm thanh khi bắn trúng hoặc hụt
 
-- 🎯 Điều khiển tâm ngắm bằng **ngón trỏ** qua webcam.
-- 🤏 Bắn khi **ngón cái và ngón trỏ chạm nhau**.
-- ✋ Nạp đạn khi **ngón cái và ngón trỏ cách xa nhau**.
-- 🔫 Hai chế độ chơi:
-  - **Classic Mode**: Bắn không giới hạn, tăng độ khó theo thời gian.
-  - **Time Mode**: Giới hạn thời gian, qua từng level với mục tiêu cụ thể.
-- 📈 Lưu điểm cao nhất vào file `highscore.txt`.
-- 💥 Hiệu ứng trúng/miss, âm thanh sống động.
-- 🧠 Giao diện menu linh hoạt điều khiển bằng chuột hoặc tay.
+## 🧰 Công nghệ sử dụng
 
-🎯 Giao diện
-<p align="center">
-  <img src="anh_giao_dien/giao_dien_chinh.png" alt="Giao diện chính" width="500"/>
-  <br/>
-  <em>Giao diện chính</em>
-</p>
-
-<p align="center">
-  <img src="anh_giao_dien/giao_dien_game.png" alt="Giao diện trò chơi" width="500"/>
-  <br/>
-  <em>Giao diện trò chơi</em>
-</p>
-
----
+- `Pygame`: đồ họa và giao diện người chơi
+- `OpenCV`: truy xuất webcam
+- `Mediapipe`: nhận diện bàn tay và các cử chỉ
+- `Threading`: xử lý luồng video song song với game loop
+- `Python 3.8+`
 
 ## 📦 Cài đặt
 
-### 1. Cài Python
-
-Yêu cầu Python 3.12 hoặc mới hơn.
-
-### 2. Cài thư viện cần thiết
-
 ```bash
-pip install pygame opencv-python mediapipe numpy
+git clone https://github.com/yourusername/duck-hunt-hand-control.git
+cd duck-hunt-hand-control
+pip install -r requirements.txt
+python main.py
 ```
 
----
-
-## 📁 Cấu trúc thư mục
-
 ```
-DuckHunt/
-│
-├── main.py                # Mã nguồn chính
-├── highscore.txt          # File lưu điểm cao
-├── bg2.png                # Hình nền game
-├── d1.png, d2.png         # Vịt bay bên phải
-├── d3.png, d4.png         # Vịt bay bên trái
-├── ot.png                 # Tâm ngắm
-├── hit.png                # Hiệu ứng trúng
-├── hit_sound.wav          # Âm thanh trúng
-└── miss_sound.wav         # Âm thanh trượt
+pygame
+opencv-python
+mediapipe
+numpy
 ```
 
----
+## 🖼️ Tài nguyên
 
-## 🕹️ Cách chơi
+Đảm bảo bạn có các tệp hình ảnh và âm thanh trong cùng thư mục với `main.py`:
 
-| Hành động        | Cách thực hiện                                       |
-|------------------|------------------------------------------------------|
-| Điều khiển tâm ngắm | Di chuyển **ngón trỏ** trước webcam                 |
-| Bắn              | **Chạm ngón cái và ngón trỏ**                        |
-| Nạp đạn          | **Tách ngón cái và ngón trỏ xa nhau**               |
-| Chọn menu        | Di chuyển tay/chuột đến nút và **nhấp (giữ)**        |
-| Khởi động lại    | Nhấn phím **R** khi đang chơi                       |
+- Hình nền: `bg2.png`
+- Vịt: `d1.png`, `d2.png`, `d3.png`, `d4.png`
+- Tâm ngắm: `ot.png`
+- Hiệu ứng bắn: `hit.png`
+- Âm thanh: `hit_sound.wav`, `miss_sound.wav`
 
----
+## 🧠 Cử chỉ tay
 
-## 🧠 Một số lưu ý
+| Hành động     | Cử chỉ tay                                                             |
+|--------------|------------------------------------------------------------------------|
+| Bắn          | Chụm ngón trỏ và ngón cái gần nhau                                     |
+| Nạp đạn       | Mở rộng ngón trỏ và ngón cái xa nhau                                   |
+| Di chuyển     | Di chuyển ngón trỏ – điều khiển tâm ngắm                               |
 
-- Chơi trong môi trường sáng tốt để **MediaPipe nhận diện tay chính xác**.
-- Chỉ hỗ trợ **1 tay duy nhất** (tay phải được khuyến khích).
-- Tâm ngắm được **làm mượt** để tránh rung lắc.
+## 🏁 Mục tiêu tương lai
 
----
+- Thêm chế độ multiplayer
+- Cải thiện AI tracking nhiều tay
+- UI nâng cao và tùy chỉnh nhiều hơn
 
-## 📸 Công nghệ sử dụng
+## 📸 Giao diện
 
-- **Python**
-- **Pygame** – Đồ họa và âm thanh
-- **OpenCV** – Xử lý hình ảnh từ webcam
-- **MediaPipe** – Nhận diện tay & cử chỉ
-- **Multithreading** – Luồng riêng cho camera
+![alt text](anhGiaoDien/meNu1.png)
+![alt text](anhGiaoDien/classicMode.png)
+![alt text](anhGiaoDien/menu2.png)
+![alt text](anhGiaoDien/timeMode.png)
+
+## 📜 Giấy phép
+
+MIT License © 2025
