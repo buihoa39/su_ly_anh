@@ -16,6 +16,7 @@ Một trò chơi **Bắn Vịt** cổ điển được điều khiển bằng **
 - 💥 Hiệu ứng trúng/miss, âm thanh sống động.
 - 🧠 Giao diện menu linh hoạt điều khiển bằng chuột hoặc tay.
 
+![giao diện chính](https://github.com/user-attachments/assets/a3b6ac50-94bb-4faf-a17c-fbc1acb2e9b9)
 ---
 
 ## 📦 Cài đặt
