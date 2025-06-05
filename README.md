@@ -28,6 +28,7 @@ Một trò chơi **Bắn Vịt** cổ điển được điều khiển bằng **
   <br/>
   <em>Giao diện trò chơi</em>
 </p>
+
 ---
 
 ## 📦 Cài đặt
